@@ -101,6 +101,11 @@ a:hover {
   overflow: hidden;
 }
 
+.grid-exp{
+  display: grid;
+  grid-template-columns:20px auto;
+}
+
 .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -700,10 +705,6 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
 .skill-mf span {
   color: #4e4e4e;
 }
@@ -1177,6 +1178,11 @@ footer .credits a {
 
 .button-a {
   background-color: #0078ff;
+  color: #fff;
+  border-color: #cde1f8;
+}
+
+.button-b{
   color: #fff;
   border-color: #cde1f8;
 }
