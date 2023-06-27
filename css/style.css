@@ -16,7 +16,6 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -63,6 +62,22 @@ a:hover {
   box-shadow: 0 0 0 4px #cde1f8;
 }
 
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.display-1 {
+  font-size: 10rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .display-1 {
+    font-size: calc(2.125rem + 10.5vw) ;
+  }
+}
+
 .display-5 {
   font-size: 2.5rem;
   font-weight: 300;
@@ -73,6 +88,10 @@ a:hover {
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.1;
+}
+
+.text-primary{
+  text-align: center !important;
 }
 
 .avatar {
@@ -130,7 +149,7 @@ a:hover {
 }
 
 .sect-mt4 {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
 /*--/ Title s /--*/
@@ -151,10 +170,11 @@ a:hover {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: black;
 }
 
 .subtitle-a {
-  color: #4e4e4e;
+  color: black;
 }
 
 .line-mf {
@@ -705,7 +725,7 @@ a:hover {
 ======================================*/
 
 .service-box {
-  background-color: #fff;
+  background-color: #f8f9fa;
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
@@ -720,7 +740,7 @@ a:hover {
 
 .service-box .service-ico {
   margin-bottom: 1rem;
-  color: #1e1e1e;
+  color: black;
 }
 
 .service-box .ico-circle {
@@ -736,7 +756,7 @@ a:hover {
 }
 
 .service-box .s-description {
-  color: #4e4e4e;
+  color: black;
 }
 
 /*======================================
@@ -829,7 +849,7 @@ a:hover {
 }
 
 .testimonial-box {
-  color: #fff;
+  color: black;
   text-align: center;
 }
 
@@ -842,7 +862,7 @@ a:hover {
 }
 
 .testimonial-box .author {
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-weight: 600;
   margin: 1rem 0;
