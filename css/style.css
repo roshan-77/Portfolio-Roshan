@@ -129,7 +129,7 @@ a:hover {
 
 .paralax-mf {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 .display-table {
@@ -155,6 +155,24 @@ a:hover {
 
 .sect-mt4 {
   /* margin-top: 4rem; */
+}
+
+/* --- Portfolio Modal ---- */
+.modal-body img{
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.w-portfolio-links{
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.w-portfolio-links button{
+  margin: 10px ;
 }
 
 /*--/ Title s /--*/
