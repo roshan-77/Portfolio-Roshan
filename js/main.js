@@ -114,7 +114,35 @@
 		}
 	});
 
-	/*---- Modal ----*/
-
+	/*---- Skill ----*/
+	$('.skill').waypoint(function () {
+        $('.progress .progress-bar').each(function () {
+            $(this).css("width", $(this).attr("aria-valuenow") + '%');
+        });
+    }, {offset: '80%'});
 
 })(jQuery);
+
+// Email Js
+function sendMail(params){
+	var tempParams= {
+	  from_name:document.getElementById('fromName').value,
+	  from_email: document.getElementById('fromEmail').value,
+	  subject: document.getElementById('subject').value,
+	  message:document.getElementById('msg').value,
+	}
+	if(tempParams.from_name !="" && tempParams.from_email !="" && tempParams.subject !="" && tempParams.subject !=""){
+		emailjs.send('service_2hs31fo', 'template_6cvxcsf', tempParams)
+		.then(function(res){
+		console.log("success", res.status)
+		}).then(()=>alert("Email Sent!!"))
+		.then(()=>{
+		document.getElementById('fromName').value = ''
+		document.getElementById('fromEmail').value = ''
+		document.getElementById('subject').value =''
+		document.getElementById('msg').value =''
+		})
+	}else{
+		
+	}
+  }

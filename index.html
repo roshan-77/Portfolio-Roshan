@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <!-- <link href="img/favicon.png" rel="icon"> -->
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Web Fonts -->
@@ -36,12 +36,15 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init(TDbMOHD71OF77lsdU);
+    })();
+  </script>
+
 </head>
 
 <body id="page-top">
@@ -68,10 +71,10 @@
             <a class="nav-link js-scroll" href="#service">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Work</a>
+            <a class="nav-link js-scroll" href="#qualification">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#blog">Blog</a>
+            <a class="nav-link js-scroll" href="#work">Work</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact</a>
@@ -89,7 +92,7 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">I am Roshan Khadka</h1>
+          <h1 class="intro-title mb-4"><strong>Roshan Khadka</strong></h1>
           <p class="intro-subtitle"><span class="text-slider-items">Analyst Programmer,Web Developer,Automation Analyst</span><strong class="text-slider"></strong></p>
           <p class="pt-3"><a class="button button-b button-big button-rouded js-scroll px-4" href="./resume/Roshan_Khadka_Resume.docx" download role="button">Download CV</a></p>
         </div>
@@ -122,26 +125,38 @@
                 </div>
                 <div class="skill-mf">
                   <p class="title-s">Skill</p>
-                  <span>HTML</span> <span class="pull-right">85%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                  <div class="skill">
+                    <span>HTML</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar"  aria-valuenow="85" aria-valuemin="0"
                       aria-valuemax="100"></div>
+                    </div>
                   </div>
-                  <span>CSS3</span> <span class="pull-right">75%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                  
+                  <div class="skill">
+                    <span>CSS3</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                    <div class="progress-bar" role="progressbar"  aria-valuenow="75" aria-valuemin="0"
                       aria-valuemax="100"></div>
+                    </div>
                   </div>
-                  <span>JAVASCRIPT</span> <span class="pull-right">70%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0"
-                      aria-valuemax="100"></div>
+                  
+                  <div class="skill">
+                    <span>JAVASCRIPT</span> <span class="pull-right">70%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar"  aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
                   </div>
-                  <span>PYTHON</span> <span class="pull-right">50%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
-                      aria-valuemax="100"></div>
+                  
+                  <div class="skill">
+                    <span>PYTHON</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar"  aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
                   </div>
+                  
                 </div>
               </div>
               <div class="col-md-6">
@@ -356,7 +371,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-4">
           <div class="work-box" >
             <div class= "work-box-m" data-bs-toggle="modal" data-bs-target="#portfolio-modal-1" >
@@ -367,19 +382,11 @@
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">redditApiExtractor</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Working with APIs</span> / <span class="w-date">2022</span>
-                    </div>
                   </div>
                   <div class="w-portfolio-links">
-                    <a href="https://roshan-77.github.io/redditApiExtractor/" target="_blank"><button class="">Website</button></a>
-                    <button class="">Source Code</button>
+                    <a href="https://roshan-77.github.io/redditApiExtractor/" target="_blank"><button class="button">Website</button></a>
+                    <a href="https://github.com/roshan-77/redditApiExtractor" target="_blank"><button class="button">Source Code</button></a>
                   </div>
-                  <!-- <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -406,124 +413,124 @@
           </div> -->
         </div>
         <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+          <div class="work-box" >
+            <div class= "work-box-m" data-bs-toggle="modal" data-bs-target="#portfolio-modal-1" >
               <div class="work-img">
                 <img src="img/work-2.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
+                    <h2 class="w-title">WeatherApp</h2>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
+                  <div class="w-portfolio-links">
+                    <a href="https://roshan-77.github.io/weatherApp/" target="_blank"><button class="button">Website</button></a>
+                    <a href="https://github.com/roshan-77/weatherApp" target="_blank"><button class="button">Source Code</button></a>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
+     <!-- <div class="modal fade" id="portfolio-modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">redditApiExtractor</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/work-1.jpg" alt="" class="">
+                  <div>
+                    <h2>Links</h2>
+                  </div>
+                  <a href="https://roshan-77.github.io/redditApiExtractor/" target="_blank"><button class="btn btn-primary">Website</button></a>
+                  <button class="btn btn-primary">Source Code</button>
+
+                </div>
+                
+              </div>
+            </div>
+          </div> -->
         </div>
         <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+          <div class="work-box" >
+            <div class= "work-box-m" data-bs-toggle="modal" data-bs-target="#portfolio-modal-1" >
               <div class="work-img">
                 <img src="img/work-3.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
+                    <h2 class="w-title">ToDo List</h2>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
+                  <div class="w-portfolio-links">
+                    <a href="https://roshan-77.github.io/ToDoList/" target="_blank"><button class="button">Website</button></a>
+                    <a href="https://github.com/roshan-77/ToDoList" target="_blank"><button class="button">Source Code</button></a>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
+     <!-- <div class="modal fade" id="portfolio-modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">redditApiExtractor</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/work-1.jpg" alt="" class="">
+                  <div>
+                    <h2>Links</h2>
+                  </div>
+                  <a href="https://roshan-77.github.io/redditApiExtractor/" target="_blank"><button class="btn btn-primary">Website</button></a>
+                  <button class="btn btn-primary">Source Code</button>
+
+                </div>
+                
+              </div>
+            </div>
+          </div> -->
         </div>
         <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+          <div class="work-box" >
+            <div class= "work-box-m" data-bs-toggle="modal" data-bs-target="#portfolio-modal-1" >
               <div class="work-img">
                 <img src="img/work-4.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Bindo Laro Cado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
+                    <h2 class="w-title">SanPhoto Factory</h2>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
+                  <div class="w-portfolio-links">
+                    <a href="https://roshan-77.github.io/sanphotofactory/" target="_blank"><button class="button">Website</button></a>
+                    <a href="https://github.com/roshan-77/sanphotofactory" target="_blank"><button class="button">Source Code</button></a>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-5.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Lena Mado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
+     <!-- <div class="modal fade" id="portfolio-modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">redditApiExtractor</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-6.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Big Bang</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
-                    </div>
+                <div class="modal-body">
+                  <img src="img/work-1.jpg" alt="" class="">
+                  <div>
+                    <h2>Links</h2>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
+                  <a href="https://roshan-77.github.io/redditApiExtractor/" target="_blank"><button class="btn btn-primary">Website</button></a>
+                  <button class="btn btn-primary">Source Code</button>
+
                 </div>
+                
               </div>
-            </a>
-          </div>
+            </div>
+          </div> -->
         </div>
         
       </div>
@@ -540,26 +547,27 @@
           <div id="testimonial-mf" class="owl-carousel owl-theme service-box">
             <div class="testimonial-box">
               <div class="author-test">
-                <img src="img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Xavi Alonso</span>
+                <img src="img/testimonial-1.jpg" alt="" class="rounded-circle b-shadow-a">
+                <span class="author">Prashanna Shrestha</span>
               </div>
               <div class="content-test">
                 <p class="description lead">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
+                  Roshan is hardworking and fast learner person with excellent technical and communication skills. He was 
+                  hard working and I really enjoyed working with him at Rotor Studios.
                 </p>
                 <span class="comit"><i class="fa fa-quote-right"></i></span>
               </div>
             </div>
             <div class="testimonial-box">
               <div class="author-test">
-                <img src="img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Marta Socrate</span>
+                <img src="img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
+                <span class="author">Kishor Thapa</span>
               </div>
               <div class="content-test">
                 <p class="description lead">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
+                  Roshan and I graduated from same University. Throughout our University days he was very helpful and talented
+                  individual. He graduated with excellent grades and skills. His dedication and hardwork is the most impressive
+                  quality that I admire.
                 </p>
                 <span class="comit"><i class="fa fa-quote-right"></i></span>
               </div>
@@ -697,7 +705,7 @@
                 <div class="col-md-6">
                   <div class="title-box-2">
                     <h5 class="title-left">
-                      Send Message Us
+                      Send Message
                     </h5>
                   </div>
                   <div>
@@ -707,13 +715,13 @@
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control" id="fromName" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" class="form-control" name="email" id="fromEmail" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -725,12 +733,12 @@
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" id="msg" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" ></textarea>
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                          <button type="submit" class="button button-a button-big button-rouded" onclick="sendMail()">Send Message</button>
                         </div>
                       </div>
                     </form>
@@ -744,23 +752,23 @@
                   </div>
                   <div class="more-info">
                     <p class="lead">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                      expedita aperiam aliquid at.
-                      Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                      mollitia inventore?
+                      Thank you for visiting my website! If you have any questions, feedback, or business inquiries, 
+                      please don't hesitate to get in touch with me. I value your input and am always here to assist you. 
+                      Feel free to contact me using the information provided below or by filling out the contact form. 
+                      Looking forward to hearing from you!
                     </p>
                     <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                      <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                      <li><span class="ion-email"></span> contact@example.com</li>
+                      <li><span class="ion-ios-location"></span> 16-20 Winchester Street, Carlton, 2218</li>
+                      <li><span class="ion-ios-telephone"></span> 0452 642 153</li>
+                      <li><span class="ion-email"></span> roshan.khadka.u@gmail.com</li>
                     </ul>
                   </div>
                   <div class="socials">
                     <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
+                      <li><a href="https://www.facebook.com/whitz.rock" target="_blank"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                      <li><a href="https://www.instagram.com/roshan_whitz/" target="_blank"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                      <li><a href="https://www.linkedin.com/in/roshan-khadka-050b3417b/" target="_blank"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="https://github.com/roshan-77?tab=repositories" target="_blank"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
                     </ul>
                   </div>
                 </div>
@@ -775,16 +783,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-                -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-              </div>
+              <p class="copyright">&copy; Copyright <strong>Roshan</strong>. All Rights Reserved</p>
             </div>
           </div>
         </div>
