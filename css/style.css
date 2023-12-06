@@ -725,8 +725,18 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.skill-mf .skill-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.skill-grid>div+div>.skill{
+  margin: 8px;
+}
+
 .skill-mf span {
   color: #4e4e4e;
+  margin: 0 10px;
 }
 
 .skill-mf .progress {
@@ -734,6 +744,7 @@ a:hover {
   margin: .5rem 0 1.2rem 0;
   border-radius: 10px;
   height: .7rem;
+  margin: 10px;
 }
 
 .skill-mf .progress .progress-bar {
