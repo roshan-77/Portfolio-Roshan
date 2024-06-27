@@ -727,7 +727,7 @@ a:hover {
 
 .skill-mf .skill-grid{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .skill-grid>div+div>.skill{
@@ -890,6 +890,7 @@ a:hover {
 .work-img {
   display: block;
   overflow: hidden;
+  height: 150px;
 }
 
 .work-img img {
