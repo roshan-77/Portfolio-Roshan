@@ -730,6 +730,13 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media screen and (max-width : 480px) {
+  .skill-mf .skill-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .skill-grid>div+div>.skill{
   margin: 8px;
 }

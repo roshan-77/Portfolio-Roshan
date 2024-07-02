@@ -123,6 +123,40 @@
 
 })(jQuery);
 
+const gitProject = $('.github-projects')
+
+$.ajax({url : "https://api.github.com/users/roshan-77/repos",
+	method: "GET"
+}).then((result)=>{console.log(result)
+
+	for(var i=0; i<=result.length; i++){
+		if(result[i].stargazers_count !== 0){
+			let article = `<div class="col-md-4">
+          <div class="work-box" >
+            <div class= "work-box-m" data-bs-toggle="modal" data-bs-target="#portfolio-modal-1" >
+              <div class="work-img">
+                <img src="https://raw.githubusercontent.com/roshan-77/${result[i].name}/${result[i].default_branch}/Thumbnail/thumbnail.png" alt="Thumbnail" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h2 class="w-title">${result[i].name}</h2>
+                  </div>
+                  <div class="w-portfolio-links">
+                    ${result[i].has_pages === true ? `<a href="https://roshan-77.github.io/${result[i].name}/" target="_blank"><button class="button">Website</button></a>` : '<div></div>'}
+                    <a href="https://github.com/roshan-77/${result[i].name}" target="_blank"><button class="button">Source Code</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
+			gitProject.append(article)
+		}
+
+	}
+})
+
 // Email Js
 function sendMail(params){
 	var tempParams= {
