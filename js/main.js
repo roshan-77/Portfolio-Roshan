@@ -145,7 +145,7 @@ $.ajax({
   method: "GET",
 })
   .then((result) => {
-    // console.log(result); // Check the result here
+    // console.log(result); // Check the result heres
 
     for (let i = 0; i < result.length; i++) {
       // Use i < result.length
