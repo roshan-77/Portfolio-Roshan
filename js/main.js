@@ -143,27 +143,73 @@ const gitProject = $(".github-projects");
 $.ajax({
   url: "https://api.github.com/users/roshan-77/repos",
   method: "GET",
-}).then((result) => {
-  console.log(result);
+})
+  .then((result) => {
+    // console.log(result); // Check the result here
 
-  for (var i = 0; i <= result.length; i++) {
-    if (result[i].stargazers_count !== 0) {
-      let article = `<div class="col-md-4">
-          <div class="work-box" >
-            <div class= "work-box-m"  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#portfolio-modal-${i}" >
-              <div class="work-img">
-                <img src="https://raw.githubusercontent.com/roshan-77/${
-                  result[i].name
-                }/${
-        result[i].default_branch
-      }/Thumbnail/thumbnail.png" alt="Thumbnail" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">${result[i].name}</h2>
+    for (let i = 0; i < result.length; i++) {
+      // Use i < result.length
+      if (result[i].stargazers_count !== 0) {
+        $.ajax({
+          url: `https://api.github.com/repos/roshan-77/${result[i].name}/stargazers`,
+          method: "GET",
+        }).then((s_result) => {
+          var names = [];
+          for (let j = 0; j < s_result.length; j++) {
+            names.push(s_result[j].login);
+          }
+          if (names.includes("roshan-77")) {
+            let article = `
+              <div class="col-md-4">
+                <div class="work-box">
+                  <div class="work-box-m" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#portfolio-modal-${i}">
+                    <div class="work-img">
+                      <img src="https://raw.githubusercontent.com/roshan-77/${
+                        result[i].name
+                      }/${
+              result[i].default_branch
+            }/Thumbnail/thumbnail.png" alt="Thumbnail" class="img-fluid">
+                    </div>
+                  <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h2 class="w-title">${result[i].name}</h2>
+                    </div>
+                    <div class="w-portfolio-links">
+                      ${
+                        result[i].has_pages === true
+                          ? `<a href="https://roshan-77.github.io/${result[i].name}/" target="_blank"><button class="button">Website</button></a>`
+                          : "<div></div>"
+                      }
+                      <a href="https://github.com/roshan-77/${
+                        result[i].name
+                      }" target="_blank"><button class="button">Source Code</button></a>
+                      <button class="button" data-toggle="modal" data-target="#portfolio-modal-${i}">Expand</button>
+                    </div>
                   </div>
-                  <div class="w-portfolio-links">
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="portfolio-modal-${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">${
+                      result[i].name
+                    }</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ${
+                      result[i].description === null
+                        ? "No description found"
+                        : result[i].description
+                    }
+                  </div>
+                  <div class="modal-footer">
                     ${
                       result[i].has_pages === true
                         ? `<a href="https://roshan-77.github.io/${result[i].name}/" target="_blank"><button class="button">Website</button></a>`
@@ -172,56 +218,19 @@ $.ajax({
                     <a href="https://github.com/roshan-77/${
                       result[i].name
                     }" target="_blank"><button class="button">Source Code</button></a>
-					<button class="button" data-toggle="modal" data-target="#portfolio-modal-${i}">
-						Expand
-					</button>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-		
-		
-		<!-- Modal -->
-      <div class="modal fade" id="portfolio-modal-${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">${
-                result[i].name
-              }</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ${
-                result[i].description === null
-                  ? "No description found"
-                  : result[i].description
-              }
-            </div>
-            <div class="modal-footer">
-			${
-        result[i].has_pages === true
-          ? `<a href="https://roshan-77.github.io/${result[i].name}/" target="_blank"><button class="button">Website</button></a>`
-          : "<div></div>"
+            </div>`;
+            gitProject.append(article); // Append the article here
+          }
+        });
       }
-			  <a href="https://github.com/roshan-77/${
-          result[i].name
-        }" target="_blank"><button class="button">Source Code</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-		
-		`;
-      gitProject.append(article);
     }
-  }
-});
+  })
+  .catch((error) => {
+    console.error("Error fetching repos:", error);
+  });
 
 // Email Js
 function sendMail(params) {
@@ -233,9 +242,11 @@ function sendMail(params) {
   };
   if (
     tempParams.from_name != "" &&
+    tempParams.from_name.length >= 4 &&
+    tempParams.subject.length >= 4 &&
     tempParams.from_email != "" &&
     tempParams.subject != "" &&
-    tempParams.subject != ""
+    tempParams.message != ""
   ) {
     emailjs
       .send("service_2hs31fo", "template_6cvxcsf", tempParams)
