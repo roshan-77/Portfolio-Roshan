@@ -143,10 +143,6 @@ const gitProject = $(".github-projects");
 $.ajax({
   url: "https://api.github.com/users/roshan-77/repos",
   method: "GET",
-  headers: {
-    Authorization:
-      "Bearer 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",
-  },
 })
   .then((result) => {
     // console.log(result); // Check the result here
@@ -157,10 +153,6 @@ $.ajax({
         $.ajax({
           url: `https://api.github.com/repos/roshan-77/${result[i].name}/stargazers`,
           method: "GET",
-          headers: {
-            Authorization:
-              "Bearer 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",
-          },
         }).then((s_result) => {
           var names = [];
           for (let j = 0; j < s_result.length; j++) {
